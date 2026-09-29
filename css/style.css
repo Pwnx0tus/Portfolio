@@ -19,6 +19,10 @@ body {
     color: var(--text-gray);
     overflow-x: hidden;
     line-height: 1.6;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 h1,
@@ -471,23 +475,33 @@ section {
 
 /* Timeline / Experience Section */
 .timeline {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding-bottom: 4rem;
     max-width: 900px;
     margin: 0 auto;
 }
 .timeline-item {
     padding: 2.5rem;
-    background: var(--card-bg);
+    background: #0f1420;
     border: 1px solid var(--card-border);
     border-radius: 12px;
-    margin-bottom: 2rem;
-    position: relative;
+    position: sticky;
+    width: 100%;
     border-left: 4px solid var(--primary-red);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
     transition: transform 0.3s;
 }
+.timeline-item:nth-child(1) { top: 100px; z-index: 10; }
+.timeline-item:nth-child(2) { top: 130px; z-index: 20; }
+.timeline-item:nth-child(3) { top: 160px; z-index: 30; }
+.timeline-item:nth-child(4) { top: 190px; z-index: 40; }
+.timeline-item:nth-child(5) { top: 220px; z-index: 50; }
+
 .timeline-item:hover {
-    transform: translateX(10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transform: translateX(5px);
 }
 .timeline-item h3 { 
     color: var(--text-white); 
@@ -649,6 +663,14 @@ section {
 
 /* Responsive */
 @media (max-width: 900px) {
+    section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
     .container {
         padding: 1.5rem;
     }
@@ -673,6 +695,8 @@ section {
     .hero {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        min-height: auto;
         gap: 1.5rem;
     }
 
@@ -742,6 +766,14 @@ section {
 }
 
 @media (max-width: 480px) {
+    section {
+        padding: 2rem 0;
+    }
+
+    .section-title {
+        margin-bottom: 1.5rem;
+    }
+
     .container {
         padding: 1.2rem;
         padding-bottom: 70px;
@@ -767,6 +799,9 @@ section {
     .hero {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        min-height: auto;
+        gap: 1rem;
     }
 
     .hero-image {
@@ -784,17 +819,19 @@ section {
     }
 
     .hero-content p {
-        font-size: 0.85rem;
+        font-size: clamp(0.8rem, 4vw, 0.85rem);
         margin-bottom: 1.5rem;
     }
 
     .hero-buttons {
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
     }
 
     .about-text > p {
-        font-size: 0.85rem;
+        font-size: clamp(0.8rem, 4vw, 0.85rem);
         margin-bottom: 1.2rem;
         line-height: 1.5;
     }
@@ -806,21 +843,24 @@ section {
     }
 
     .stat h3 {
-        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 5vw, 1.3rem);
     }
 
     .stat p {
-        font-size: 0.6rem;
+        font-size: clamp(0.55rem, 3vw, 0.6rem);
         letter-spacing: 0px;
     }
 
     .section-title h2 {
-        font-size: 1.4rem;
+        font-size: clamp(1.2rem, 6vw, 1.4rem);
     }
 
     .image-wrapper {
-        width: 160px;
-        height: 160px;
+        width: 45vw;
+        max-width: 180px;
+        height: 45vw;
+        max-height: 180px;
+        margin: 0 auto;
     }
     
     .red-circle {
@@ -829,7 +869,7 @@ section {
 
     .btn-primary, .btn-secondary {
         padding: 8px 16px;
-        font-size: 0.75rem;
+        font-size: clamp(0.7rem, 3.5vw, 0.75rem);
     }
 
     .work-card {
@@ -853,36 +893,41 @@ section {
     }
 
     .work-info h4 {
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 4.5vw, 1rem);
     }
 
     .work-info p {
-        font-size: 0.8rem;
+        font-size: clamp(0.75rem, 3.5vw, 0.8rem);
     }
 
     .timeline-item {
         padding: 1.2rem;
-        margin-bottom: 1.5rem;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
     }
 
+    .timeline-item:nth-child(1) { top: 70px; }
+    .timeline-item:nth-child(2) { top: 90px; }
+    .timeline-item:nth-child(3) { top: 110px; }
+    .timeline-item:nth-child(4) { top: 130px; }
+    .timeline-item:nth-child(5) { top: 150px; }
+
     .timeline-item h3 {
-        font-size: 1.1rem;
+        font-size: clamp(1rem, 5vw, 1.1rem);
     }
 
     .timeline-item h4 {
-        font-size: 0.9rem;
+        font-size: clamp(0.85rem, 4.5vw, 0.9rem);
     }
 
     .timeline-item .duration {
-        font-size: 0.75rem;
+        font-size: clamp(0.7rem, 3.5vw, 0.75rem);
         margin-bottom: 1rem;
     }
 
     .timeline-item ul li {
-        font-size: 0.8rem;
+        font-size: clamp(0.75rem, 3.5vw, 0.8rem);
         margin-bottom: 0.5rem;
     }
 
@@ -901,41 +946,55 @@ section {
     }
 
     .terminal-window {
-        height: 280px;
+        height: auto;
+        min-height: 250px;
         width: 100%;
         max-width: 100%;
     }
 
     .terminal-header .title {
-        font-size: 1rem;
+        font-size: clamp(0.85rem, 4vw, 1rem);
     }
 
     .terminal-body {
-        font-size: 0.85rem;
+        font-size: clamp(0.8rem, 4vw, 0.85rem);
         padding: 12px;
     }
 
     .terminal-input-line {
-        font-size: 0.85rem;
+        font-size: clamp(0.8rem, 4vw, 0.85rem);
         padding: 0 12px 12px 12px;
     }
     
+    .contact-section {
+        padding: 40px 10px 20px;
+    }
+    
     .contact-container {
-        padding: 15px;
+        padding: 20px 15px;
+        margin-bottom: 20px;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
     }
 
+    .contact-form {
+        gap: 12px;
+    }
+
     .input-group input,
     .input-group textarea {
-        font-size: 0.85rem;
-        padding: 12px 12px 12px 35px;
+        font-size: clamp(0.8rem, 4vw, 0.85rem);
+        padding: 10px 10px 10px 32px;
+    }
+
+    .input-group textarea {
+        min-height: 90px;
     }
 
     .input-group i {
-        font-size: 1rem;
-        top: 13px;
+        font-size: 0.9rem;
+        top: 11px;
         left: 10px;
     }
 
@@ -948,7 +1007,7 @@ section {
 
     .tab-header span {
         padding: 5px 10px;
-        font-size: 0.65rem;
+        font-size: clamp(0.6rem, 3vw, 0.65rem);
     }
 
     .skill-card {
@@ -959,11 +1018,11 @@ section {
     }
 
     .skill-card h4 {
-        font-size: 0.85rem;
+        font-size: clamp(0.8rem, 4vw, 0.85rem);
     }
 
     .skill-card p {
-        font-size: 0.75rem;
+        font-size: clamp(0.7rem, 3.5vw, 0.75rem);
     }
 }
 
@@ -1034,6 +1093,10 @@ section {
     font-family: 'Fira Code', monospace;
     font-size: 1rem;
     transition: all 0.3s ease;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
 }
 
 .input-group textarea {

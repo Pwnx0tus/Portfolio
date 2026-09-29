@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranjeet Bisen | Cyber Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Silkscreen&family=VT323&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=48">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2">
+</head>
+
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="bg"></canvas>
+
+    <!-- Floating Nav -->
+    <nav class="floating-nav">
+        <a href="#home" class="active"><i class="fas fa-home"></i></a>
+        <a href="#about"><i class="fas fa-user"></i></a>
+        <a href="#experience"><i class="fas fa-briefcase"></i></a>
+        <a href="#projects"><i class="fas fa-code"></i></a>
+        <a href="#terminal-section"><i class="fas fa-terminal"></i></a>
+        <a href="#contact"><i class="fas fa-envelope"></i></a>
+    </nav>
+
+    <div class="container">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="logo"><span id="logo-white" style="color:var(--text-white); transition:none;"></span><span id="logo-red" style="color:var(--primary-red); transition:none;"></span><span class="cursor">|</span></div>
+            <div class="social-top">
+                <a href="https://github.com/Pwnxotus" target="_blank" title="GitHub (Pwnxotus)"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/pwnx0tus" target="_blank" title="GitHub (pwnx0tus)"><i class="fab fa-github"></i></a>
+                <a href="https://tryhackme.com/p/pwnxotus" target="_blank" title="TryHackMe"><img src="assets/images/tryhackme-icon-transparent.png" alt="TryHackMe" class="thm-icon"></a>
+                <a href="https://linkedin.com/in/ranjeet-bisen-0b8b452b4" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://pwnxotus.medium.com/" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
+                <a href="mailto:bisenranjeet043@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Securing Systems<br>With<br><span class="typing-text"></span><span class="cursor">|</span></h1>
+                <p>Welcome! I'm Ranjeet Bisen, a passionate Cybersecurity Professional, Penetration Tester, and OSINT Researcher dedicated to finding vulnerabilities before they are exploited.</p>
+                <div class="hero-buttons">
+                    <a href="#experience" class="btn-primary">VIEW EXPERIENCE &rarr;</a>
+                    <a href="assets/docs/Ranjeet_Bisen_Resume.pdf" target="_blank" class="btn-secondary"><i class="fas fa-file-pdf"></i> RESUME</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="assets/images/profile.jpg" alt="Ranjeet Bisen">
+                    <div class="red-circle"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-title reveal">
+                <h2>Profile <span>Summary</span></h2>
+            </div>
+            <div class="about-grid reveal">
+                <div class="about-text">
+                    <p>Cybersecurity professional with hands-on experience in penetration testing, vulnerability assessment, and OSINT-driven threat research. Ranked in the top 1% across 40+ national and international CTF competitions, including a 3rd-place finish among 850+ teams.</p>
+                    <p>Built and deployed 2 independent security/backend tools using Python and FastAPI. Skilled in Web/API VAPT, OWASP Top 10, and SOC operations, with a strong record of applying offensive-security skills to real-world security engineering challenges.</p>
+                    
+                    <div class="stats" style="margin-top: 2rem;">
+                        <div class="stat">
+                            <h3>1%</h3>
+                            <p>TOP TIER IN<br>40+ CTFs</p>
+                        </div>
+                        <div class="stat">
+                            <h3>BCA</h3>
+                            <p>STUDENT<br>2024 - 2027</p>
+                        </div>
+                        <div class="stat">
+                            <h3>4+</h3>
+                            <p>YEARS<br>EXPERIENCE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-tabs">
+                    <div class="tab-header">
+                        <span class="active" data-target="tab-skills">SKILLS</span>
+                        <span data-target="tab-certs">CERTIFICATIONS</span>
+                        <span data-target="tab-ctf">CTF ACHIEVEMENTS</span>
+                        <span data-target="tab-edu">EDUCATION</span>
+                    </div>
+                    
+                    <!-- Skills Tab -->
+                    <div class="tab-content active-tab" id="tab-skills">
+                        <div class="skill-card">
+                            <h4>Languages</h4>
+                            <p>Python, SQL, JavaScript, PHP, HTML, CSS</p>
+                        </div>
+                        <div class="skill-card">
+                            <h4>Security Testing</h4>
+                            <p>Penetration Testing, Vulnerability Assessment, Web/API VAPT, OWASP Top 10</p>
+                        </div>
+                        <div class="skill-card">
+                            <h4>Tools & Platforms</h4>
+                            <p>Nmap, Burp Suite, Wireshark, Metasploit, Nikto, Splunk (SIEM)</p>
+                        </div>
+                        <div class="skill-card">
+                            <h4>Infrastructure & Domains</h4>
+                            <p>Git, Linux, Docker, OSINT, Threat Intelligence, SOC Operations, Incident Response</p>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Tab -->
+                    <div class="tab-content" id="tab-certs" style="display: none;">
+                        <div class="skill-card" style="grid-column: 1 / -1;">
+                            <h4>CNSP & CSEDP</h4>
+                            <p>Certified Network Security Practitioner & Social Engineering Defense Practitioner (SecOps Group)</p>
+                        </div>
+                        <div class="skill-card" style="grid-column: 1 / -1;">
+                            <h4>C3SA & CASA</h4>
+                            <p>Certified Cyber Security Analyst (CyberWarfare Labs) & Certified API Security Analyst (APISEC University)</p>
+                        </div>
+                        <div class="skill-card" style="grid-column: 1 / -1;">
+                            <h4>CAP</h4>
+                            <p>Certified Appsec Practitioner (SecOps Group)</p>
+                        </div>
+                    </div>
+
+                    <!-- CTF Tab -->
+                    <div class="tab-content" id="tab-ctf" style="display: none;">
+                        <div class="skill-card" style="grid-column: 1 / -1;">
+                            <h4>3rd Place - ApoorvCTF 2026</h4>
+                            <p>IIIT Kottayam (850+ teams, top 1%)</p>
+                        </div>
+                        <div class="skill-card" style="grid-column: 1 / -1;">
+                            <h4>4th Place - WatCTF 2025</h4>
+                            <p>University of Waterloo, Canada (800+ teams, top 1%)</p>
+                        </div>
+                        <div class="skill-card" style="grid-column: 1 / -1;">
+                            <h4>Other Ranks</h4>
+                            <p>7th Place - DigitalCyberHunt 2026, 13th - CyberStrom 2025, 22nd - CREST CTF.</p>
+                        </div>
+                    </div>
+
+                    <!-- Education Tab -->
+                    <div class="tab-content" id="tab-edu" style="display: none;">
+                        <div class="skill-card" style="grid-column: 1 / -1;">
+                            <h4>Bachelor of Computer Applications (BCA)</h4>
+                            <p>Makhanlal Chaturvedi Rashtriya Patrkarita University<br>Bhopal, India • 2024 - 2027</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section (Timeline) -->
+        <section id="experience" class="experience-section">
+            <div class="section-title reveal">
+                <h2>Work <span>Experience</span></h2>
+            </div>
+            
+            <div class="timeline reveal">
+                <!-- Defenzelite -->
+                <div class="timeline-item">
+                    <h3>Security Engineer</h3>
+                    <h4>Defenzelite (Internship)</h4>
+                    <div class="duration">Aug 2026 - Present · 2 mos • Seoni, MP, India · On-site</div>
+                    <ul>
+                        <li>Focus areas: Web Application Security, Mobile Application Penetration Testing, and additional security skills.</li>
+                        <li>Panasonic SAST audit: identified security weaknesses, documented them, and reported findings.</li>
+                    </ul>
+                </div>
+
+                <!-- CliffGuard -->
+                <div class="timeline-item">
+                    <h3>Cyber Security Analyst (VAPT)</h3>
+                    <h4>CliffGuard Cybersecurity (Internship)</h4>
+                    <div class="duration">Jun 2026 - Aug 2026 · 3 mos • Remote</div>
+                    <ul>
+                        <li>Conducted comprehensive Vulnerability Assessment and Penetration Testing (VAPT) on web applications to identify security vulnerabilities.</li>
+                        <li>Assessed applications against OWASP Top 10 security risks, focusing on critical vulnerabilities like SQL Injection and XSS.</li>
+                        <li>Utilized industry-standard security testing tools for reconnaissance and manual testing, enhancing overall security posture.</li>
+                    </ul>
+                </div>
+                
+                <!-- DGPL -->
+                <div class="timeline-item">
+                    <h3>Cyber Security Analyst (VAPT)</h3>
+                    <h4>Durbhasi Gurukulam Private Limited (DGPL) (Internship)</h4>
+                    <div class="duration">Jan 2026 - Jun 2026 · 6 mos • Remote</div>
+                    <ul>
+                        <li>Conducted comprehensive vulnerability assessments and penetration testing on web applications to identify security weaknesses.</li>
+                        <li>Focused on OWASP Top 10 vulnerabilities, documenting detailed security reports for remediation.</li>
+                        <li>Contributed to a private cybersecurity project aimed at exploit analysis and enhancing overall system security.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Stacking Cards) -->
+        <section id="projects" class="projects-section">
+            <div class="section-title reveal">
+                <h2>Independent <span>Projects</span></h2>
+            </div>
+            
+            <div class="works-grid">
+                <!-- DIGI-NETRA -->
+                <div class="work-card" style="top: 120px; z-index: 10;">
+                    <img src="assets/images/digi_netra.jpg" alt="DIGI-NETRA OSINT Toolkit">
+                    <div class="work-info">
+                        <h4>
+                            <a href="https://third-eye-ufqs.onrender.com/" target="_blank" style="color:var(--primary-red); text-decoration:none;">DIGI-NETRA | OSINT Assistant Toolkit <i class="fas fa-external-link-alt" style="font-size:0.8em; margin-left:5px;"></i></a>
+                            <a href="https://github.com/pwnxotus/DIGI-NETRA" target="_blank" style="color:var(--text-white); text-decoration:none; margin-left:10px;"><i class="fab fa-github"></i></a>
+                        </h4>
+                        <p>Built a modular Python OSINT toolkit for digital investigations, tracing phone numbers, usernames, IP addresses, and emails through a simple, interactive CLI.</p>
+                        <p style="margin-top:0.5rem; font-size:0.85rem; color:#a0aab2;">Implemented cross-platform username enumeration, phone number reconnaissance, IP geolocation, and email breach checks in a single tool.<br><br><strong>Stack:</strong> Python, OSINT frameworks, Git, GitHub</p>
+                    </div>
+                </div>
+
+                <!-- Vehicle Info -->
+                <div class="work-card" style="top: 150px; z-index: 20;">
+                    <img src="assets/images/vehicle_info.png" alt="Vehicle Info Tool">
+                    <div class="work-info">
+                        <h4><a href="https://vehicle-info-vnco.onrender.com" target="_blank" style="color:var(--primary-red); text-decoration:none;">Vehicle Info | Information Lookup Tool <i class="fas fa-external-link-alt" style="font-size:0.8em; margin-left:5px;"></i></a></h4>
+                        <p>Built and deployed a full-stack web application that retrieves complete vehicle records — registration, owner, insurance, and challan history — from a single registration number.</p>
+                        <p style="margin-top:0.5rem; font-size:0.85rem; color:#a0aab2;">Designed and implemented a FastAPI backend in Python to process lookup requests and return structured vehicle data in real time; live-deployed and publicly accessible.<br><br><strong>Stack:</strong> Python, FastAPI</p>
+                    </div>
+                </div>
+
+                <!-- Kutumb URL Extractor -->
+                <div class="work-card" style="top: 180px; z-index: 30;">
+                    <img src="assets/images/kutumb_extractor.jpg" alt="Kutumb URL Extractor">
+                    <div class="work-info">
+                        <h4>
+                            <a href="https://github.com/Pwnx0tus/Kutumb-Url-Extractor" target="_blank" style="color:var(--primary-red); text-decoration:none;">Kutumb URL Extractor | OSINT Tool <i class="fas fa-external-link-alt" style="font-size:0.8em; margin-left:5px;"></i></a>
+                            <a href="https://github.com/Pwnx0tus/Kutumb-Url-Extractor" target="_blank" style="color:var(--text-white); text-decoration:none; margin-left:10px;"><i class="fab fa-github"></i></a>
+                        </h4>
+                        <p>Developed an automated URL extraction tool designed to scrape and aggregate links efficiently from target domains, enhancing data collection for intelligence gathering.</p>
+                        <p style="margin-top:0.5rem; font-size:0.85rem; color:#a0aab2;">Streamlines the reconnaissance phase of penetration testing and OSINT research by systematically extracting deep URLs and compiling the data.<br><br><strong>Stack:</strong> Python, Web Scraping</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terminal Section -->
+        <section id="terminal-section" class="terminal-section">
+            <div class="section-title reveal">
+                <h2>Interactive <span>Terminal</span></h2>
+            </div>
+            <div class="terminal-window reveal">
+                <div class="terminal-header">
+                    <span class="btn red"></span>
+                    <span class="btn yellow"></span>
+                    <span class="btn green"></span>
+                    <span class="title">root@pwnxotus:~</span>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <!-- JS injected -->
+                </div>
+                <div class="terminal-input-line">
+                    <span class="prompt">root@pwnxotus:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section / Footer -->
+        <section id="contact" class="contact-section">
+            <div class="section-title reveal">
+                <h2>Initiate <span>Connection</span></h2>
+            </div>
+            <div class="contact-container reveal">
+                <form action="https://formsubmit.co/bisenranjeet043@gmail.com" method="POST" class="contact-form">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New message from Pwnxotus Portfolio!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+                    
+                    <div class="input-group">
+                        <input type="text" name="name" required placeholder="Subject / Alias">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" required placeholder="Return Address (Email)">
+                        <i class="fas fa-at"></i>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="message" required placeholder="Encrypted Message..." rows="5"></textarea>
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 15px;">
+                        <i class="fas fa-paper-plane" style="margin-right: 10px;"></i> TRANSMIT SECURELY
+                    </button>
+                </form>
+            </div>
+            
+            <footer class="footer-bottom">
+                <p>&copy; 2026 Ranjeet Bisen (Pwnxotus). All rights reserved.</p>
+                <p class="hacker-text">System secure. Connection terminated.</p>
+            </footer>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/script.js?v=48"></script>
+</body>
+
+</html>
